@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -88,6 +89,7 @@ public class RestApp {
             //EJECUTAR EL SQL
             
             //RECORRER EL RESULTADO
+            
         } catch (SQLException ex) {
             Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -98,8 +100,9 @@ public class RestApp {
     
     }
      
+     JOptionPane.showMessageDialog(null,"CONSULTA FINALIZADA EXITOSAMENTE" );
+     conexion.disconnect(); 
      
-     conexion.disconnect();   
     }
     
 }
